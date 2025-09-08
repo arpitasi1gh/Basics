@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table, th, td, tbody, tfoot, thead, caption {
+            border: 0.1vw solid black;
+            border-collapse: collapse;
+            padding: 1vw;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Items</caption>
+        <thead>
+            <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Stationary</th>
+                <th scope="col">Colour</th>
+                <th scope="col">Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Pencil</td>
+                <td>Yellow</td>
+                <td>$3</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Pen</td>
+                <td>Blue</td>
+                <td>$7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Sharpner</td>
+                <td>Blue</td>
+                <td>$5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>Total</th>
+            <td colspan="3">$15</td>
+        </tfoot>
+    </table>
+</body>
+</html>
