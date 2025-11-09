@@ -1,6 +1,7 @@
 <div align="center">
 
-### 🔗 [Live Demo](https://basics-basicform.vercel.app/)
+**Deployed Link 🔗:**
+[Live Demo](https://basics-basicform.vercel.app/)
 **Tech Stacks Used:**  
 Basic HTML5 and CSS3 (Responsive Web Design)
 
