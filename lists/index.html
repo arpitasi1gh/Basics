@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        ul {
+            list-style-type: square;
+        }
+        ul, ol, dl {
+            padding: 2vw;
+            margin: 2vw;
+            background-color: aliceblue;
+        }
+        li, dd, dt {
+            background-color: rgb(246, 234, 237);
+            padding: 0vw 0vw 1vw vw;
+        }
+        h1 {
+            background-color: rgb(192, 216, 250);
+            padding: 1vw;
+        }
+        dd, dt, li {
+            margin: 1vw;
+            padding: 1vw;
+        }
+        dt {
+            background-color: rgb(249, 216, 224);
+            font-weight: bold;
+        }
+        dd {
+            margin-bottom: 4vw;
+        }
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+        @media screen and (max-width: 214px) {
+            body {
+                font-size: 5vw;
+                text-align: center;
+            }
+            h1 {
+                font-size: 7vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Unordered List</h1>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
+    <h1>Ordered List</h1>
+    <ol reversed>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ol>
+    <h1>Description List</h1>
+    <dl>
+        <dt>title 1</dt>
+        <dd>desc 1 is Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolorem repellendus enim porro necessitatibus minus, omnis labore, delectus architecto, dolore provident amet.</dd>
+
+        <dt>title 2</dt>
+        <dd>desc 2 is Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorem harum molestias debitis numquam repellat perferendis. Iste fuga numquam repellat cupiditate debitis!</dd>
+
+        <dt>title 3</dt>
+        <dd>desc 3 is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel modi aut minima, tempora culpa consequatur totam eius reprehenderit accusamus neque, quasi optio?</dd>
+
+        <dt>title 4</dt>
+        <dd>desc 4 is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, quisquam? Explicabo obcaecati architecto tenetur non labore optio. Doloremque totam harum sunt quo?</dd>
+    </dl>
+</body>
+</html>
