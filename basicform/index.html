@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalvium Experience Survey</title>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1,
+    #sub {
+        text-align: center;
+    }
+    #sub {
+        margin-bottom: 0.2rem;
+    }
+    #sub:hover {
+        cursor: pointer;
+        opacity: 95%;
+    }
+
+    h1 {
+        color: rgb(193, 33, 33);
+    }
+
+    #sub {
+        background: rgb(193, 33, 33);
+        color: white;
+        width: 100%;
+        padding: 0.5vw;
+        font-size: 1vw;
+        border-radius: 2.5%;
+    }
+
+    #email,
+    #name {
+        width: 95.6%;
+        padding: 1vw;
+        margin: 1vw;
+    }
+
+    option,
+    select {
+        width: 100%;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: 0.5vw;
+    }
+
+    textarea {
+        padding: 1vw;
+        width: 97.8%;
+    }
+
+    @media screen and (max-width: 216px) {
+        h1 {
+            font-size: 5vw;
+        }
+        body {
+            text-align: center;
+            font-size: 3vw;
+        }
+        #sub {
+            font-size: 4vw;
+        }
+        
+    }
+</style>
+
+<body>
+    <h1>Kalvium Experience Survey</h1>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Full Name:</legend>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Email Address:</legend>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </fieldset><br>
+
+
+        <p for="experience">Rate your Kalvium Experience:</p>
+        <input type="radio" name="experience" id="experience1" value="1"><label for="experience1">Excellent</label>
+        <input type="radio" name="experience" id="experience2" value="2"><label for="experience2">Good</label>
+        <input type="radio" name="experience" id="experience3" value="3"><label for="experience3">Average</label>
+        <input type="radio" name="experience" id="experience4" value="4"><label
+            for="experience4">Poor</label><br><br><br>
+
+        <p for="activities">Select your favorite Activities:</p>
+        <input type="checkbox" name="activities" id="activity1" value="activity1"><label for="activity1">Coding</label>
+        <input type="checkbox" name="activities" id="activity2" value="activity2"><label for="activity2">Gaming</label>
+        <input type="checkbox" name="activities" id="activity3" value="activity3"><label
+            for="activity3">Discussions</label>
+        <input type="checkbox" name="activities" id="activity4" value="activity4"><label
+            for="activity4">Workshops</label><br><br><br>
+
+        <label for="select">Preferred Communication Method:</label><br><br>
+        <select name="select" id="select">
+            <option value="option1">Email</option>
+            <option value="option2">Phone</option>
+            <option value="option3">Chat</option>
+            <option value="option4">In-Person</option>
+        </select><br><br><br>
+
+        <label for="views">Additional Comments:</label><br><br>
+        <textarea id="views" name="views" rows="7" placeholder="Share your thoughts..."></textarea><br><br>
+
+        <input type="submit" value="Submit" id="sub"> <br>
+        <input type="reset" value="Reset" id="sub">
+</body>
+
+</html>
