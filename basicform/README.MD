@@ -1,8 +1,11 @@
 <div align="center">
 
 **Deployed Link 🔗:**
+<br>
 [Live Demo](https://basics-basicform.vercel.app/)
+<br><br>
 **Tech Stacks Used:**  
+<br>
 Basic HTML5 and CSS3 (Responsive Web Design)
 
 ![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5)
