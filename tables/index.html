@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,
+        th,
+        td,
+        tbody,
+        tfoot,
+        thead,
+        caption {
+            border: 0.1vw solid black;
+            border-collapse: collapse;
+            padding: 1vw;
+            text-align: center;
+        }
+
+        table {
+            background-color: aliceblue;
+        }
+
+        caption {
+            background-color: lightcoral;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        @media screen and (max-width: 340px) {
+            body {
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="t1">
+        <h2>Table 1</h2>
+        <table>
+            <caption>Items</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">Stationary</th>
+                    <th scope="col">Colour</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Cost (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Pencil</td>
+                    <td>Yellow</td>
+                    <td>2</td>
+                    <td>$3</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Pen</td>
+                    <td>Blue</td>
+                    <td>5</td>
+                    <td>$7</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sharpner</td>
+                    <td>Blue</td>
+                    <td>7</td>
+                    <td>$5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <th>Total</th>
+                <td colspan="4">$15</td>
+            </tfoot>
+        </table>
+    </div>
+    <br>
+    <div id="t2">
+        <h2>Table 2</h2>
+        <table>
+            <caption>Timetable</caption>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wed</th>
+                    <th>Thr</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9-10 (AM)</td>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                    <td>d</td>
+                    <td>e</td>
+                    <td>f</td>
+                    <td>g</td>
+                </tr>
+                <tr>
+                    <td>10-11 (AM)</td>
+                    <td>h</td>
+                    <td>i</td>
+                    <td>j</td>
+                    <td>k</td>
+                    <td>l</td>
+                    <td>m</td>
+                    <td>n</td>
+                </tr>
+                <tr>
+                    <td>11-12 (AM)</td>
+                    <td>o</td>
+                    <td>p</td>
+                    <td>q</td>
+                    <td>r</td>
+                    <td>s</td>
+                    <td>t</td>
+                    <td>u</td>
+                </tr>
+                <tr>
+                    <td>12-1 (PM)</td>
+                    <td>v</td>
+                    <td>w</td>
+                    <td>x</td>
+                    <td>y</td>
+                    <td>z</td>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
