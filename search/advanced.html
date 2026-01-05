@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+            alt="Google Logo" aria-label="Google" role="img" class="img-navicon">
+    </div> -->
+    <div>
+        <ul class="navbar-google navbar-adv">
+            <li class="navbar-item"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+                    alt="Google Logo" aria-label="Google" role="img" class="img-navicon"></li>
+            <li class="navbar-item"><a href="index.html">Google Search</a></li>
+        </ul>
+    </div>
+    <h1>Advanced Search</h1>
+    <div class="hr"></div>
+    <form action="https://www.google.com/search" role="search" method="GET">
+        <div class="columns">
+            <div class="col-item">
+                <span class="col1-heading">Find pages with...</span>
+                <label class="col1-body" for="as_q">all these words:</label>
+                <label class="col1-body" for="as_epq">this exact word or phrase:</label>
+                <label class="col1-body" for="as_oq">any of these words:</label>
+                <label class="col1-body" for="as_eq">none of these words:</label>
+            </div>
+            <div class="col-item">
+                <div class="advanced-input-header">Enter Your Query(s) In The Input Fields Given Below: </div>
+                <input type="text" name="as_q" class="advanced-input">
+                <input type="text" name="as_epq" class="advanced-input">
+                <input type="text" name="as_oq" class="advanced-input">
+                <input type="text" name="as_eq" class="advanced-input">
+                <input type="submit" value="Advanced Search" class="adv-search-btn">
+            </div>
+            <div class="col-item">
+                <span class="col2-heading">To do this in the search box.</span>
+                <span class="col2-body">Type the important words: <span class="keywords">tri-colour rat terrier</span></span>
+                <span class="col2-body">Put exact words in quotes: <span class="keywords">"rat terrier"</span></span>
+                <span class="col2-body">Type <span class="keywords">OR</span> between all the words you want: <span
+                        class="keywords">miniature OR standard</span></span>
+                <span class="col2-body">Put a minus sign just before words that you don't want: <span
+                        class="keywords">-rodent, -"Jack Russell"</span></span>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
