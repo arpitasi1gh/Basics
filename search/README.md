@@ -2,7 +2,7 @@
 
 **Deployed Link 🔗:**
 <br>
-[Live Demo]([https://basics-lists.vercel.app/](https://basics-search.vercel.app/))
+[Live Demo](https://basics-search.vercel.app/)
 <br><br>
 **Tech Stacks Used:**
 <br>
