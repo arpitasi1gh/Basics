@@ -13,3 +13,5 @@ Basic HTML5 and CSS3 (Responsive Web Design)
 ![Status](https://img.shields.io/badge/Status-Deployed-brightgreen)
 
 </div>
+
+<centre>For visiting deployed website on chrome click on "details" button then click on underlined link "this unsafe site" at the bottom.</centre>
