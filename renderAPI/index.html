@@ -3,95 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Render API</title>
+    <title>Document</title>
     <style>
-        body {
-            background-color: rgb(0, 195, 255);
+        .cards-container {
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100vh;
-            margin: 0;
+            align-items: center;
         }
-        .box {
-            font-size: 4vw;
-            margin-top: 4vh;
-            color: rgb(255, 94, 0);
-            text-shadow: 2px 2px 0px rgb(255, 252, 250);
+        .card {
+            margin: 2vw;
+            padding: 1.5vw;
+            border-radius: 15px;
+            background-color: bisque;
+            box-shadow: 0 0 2px black;
         }
-        .main {
-            background-color: rgb(0, 0, 0);
-            padding: 1vw 2vw 1vw 2vw;
-            border-radius: 2vw;
-            display: inline-block;
-            text-align: center;
-            border: 0.325vw groove rgb(255, 174, 0);
-            box-shadow: 0vw 0vw 5vw rgba(0, 0, 0, 0.481);
-            width: 75%;
-            height: 75vh;
-        }
-        h1 {
-            font-size: 4vw;
-            color: rgb(255, 251, 9);
-            text-shadow: 2px 2px 0px rgb(0, 121, 121);
-        }
-        h2 {
-            font-size: 3vw;
-            color: rgb(255, 94, 0);
-            text-shadow: 2px 2px 0px rgb(255, 255, 255);
-        }
-        p {
-            font-size: 3vw;
-            margin: 0;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-            text-shadow: 2px 2px 0px rgb(255, 94, 0);
-            white-space: pre-line;
-        }
-        input {
-            padding: 0.5vw;
-            font-size: 1.5vw;
-            border-radius: 0.5vw;
-            border: none;
-            margin-top: 2vh;
-            text-align: center;
-            border: 0.15vw solid rgb(0, 157, 255);
-        }
-        input::placeholder {
-            color: rgba(0, 0, 0, 0.86);
-            opacity: 0.5;
-        }
-        input:focus {
-            outline: none;
-            box-shadow: 0vw 0vw 0.15vw rgb(0, 0, 0);
-        }
-        button {
-            padding: 0.5vw 1vw;
-            font-size: 1.5vw;
-            border-radius: 0.5vw;
-            border: 0.15vw groove rgb(255, 174, 0);
-            background-color: rgb(255, 174, 0);
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 0px rgb(122, 114, 0);
-            cursor: pointer;
-            margin-left: 1vw;
-        }
-        button:hover {
-            background-color: orange
-        }
-        button:active {
-            background-color: rgb(255, 174, 0);
+        img {
+            height: 200px;
+            margin: 1vw;
         }
     </style>
 </head>
 <body>
     <div class="main">
-        <h1>Weather Dashboard</h1>
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button>Check Weather</button>
-        <div class="renderAPI"></div>
+        <div class="cards-container"></div>
+        <div class="error-container"></div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
