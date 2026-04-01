@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  text-decoration: none;
+}
+
+ol {
+    list-style: none;
+    color: rgb(32, 92, 73);
+}
+
+h1 > span {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: bolder;
+    color: rgb(54, 152, 121);
+}
+
+h1 > img {
+    padding-left: 5px;
+}
+
+h1 {
+    padding-top: 5px;
+    background-color: rgb(207, 255, 231);
+    box-shadow: 0px 0px 0.5px black;
+}
+
+.my-list-item {
+    background: rgba(216, 255, 238, 0.468);
+    padding: 15px;
+    font-weight: bolder;
+    margin-top: 25px;
+    box-shadow: 0px 0px 0.5px black;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#task-title, #task-details, #task-due-time {
+    grid-column: 1;
+}
+
+#addatask-btn {
+    margin-right: 5px;
+    padding: 2.5px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    color: rgb(54, 152, 121);
+    font-weight: bolder;
+    background: rgba(216, 255, 238, 0.468);
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+#addatask-btn>span {
+    margin-left: 9.5px;
+    margin-right: 31px;
+}
+
+#addatask-btn:hover {
+    color: rgb(32, 92, 73);
+    cursor: pointer;
+}
+
+#addatask-btn:active {
+    color: rgba(32, 92, 73, 0.759);
+    background: rgba(216, 255, 238, 0.326);
+}
+
+body {
+    background: rgba(216, 255, 238, 0.468);
+}
+
+#my-list {
+    background: #ffffff77;
+    padding: 0 15px 15px 15px;
+    font-size: large;
+    margin: 0 auto;
+}
+
+.editing {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+li div {
+    font-weight: bolder;
+    color: rgb(54, 152, 121);
+    margin-bottom: 11px;
+}
+#task-due-time {
+    margin-bottom: 0px;
+}
+
+div span {
+    color: rgb(32, 92, 73);
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+input[type="checkbox"] {
+    accent-color: rgb(54, 152, 121);
+    transform: scale(3);
+    margin-right: 17px;
+}
+
+.task-btns {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: center;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#editatask-btn {
+    background: rgb(207, 255, 231);
+    border: none;
+    padding: 2.6px 5px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(32, 92, 73);
+}
+
+#saveatask-btn, #deleteatask-btn {
+    background: rgb(207, 255, 231);
+    border: none;
+    padding: 6.5px 8.5px 9.5px 8.5px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(32, 92, 73);
+    margin-left: 5px;
+    float: right;
+}
+
+input[type="text"], textarea {
+    height: fit-content;
+    margin-bottom: 11px;
+    display: block;
+    width: 97%;
+}
+
+input[type="datetime-local"] {
+    margin-left: 7.5px;
+    width: 55%;
+}
+
+#saveatask-btn:hover, #deleteatask-btn:hover, #editatask-btn:hover, input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+#saveatask-btn {
+    background: rgb(105, 224, 122);
+}
+
+#deleteatask-btn {
+    background: rgb(144, 250, 172);
+}
+
+input, textarea {
+    font-size: large;
+    border-radius: 5px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: rgb(226, 227, 226);
+    padding: 7.5px;
+    field-sizing: content;
+    resize: none;
+    
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(32, 92, 73);
+}

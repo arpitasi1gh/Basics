@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=ciHkwAJFgWOk&format=png&color=000000" sizes="32x32" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>
+        <img src="https://img.icons8.com/?size=100&id=ciHkwAJFgWOk&format=png&color=000000" alt="📋" width="50px">
+        <span>TO-DO LIST</span>
+    </h1>
+    <ol id="my-list">
+        <li id="" class="my-list-item editing">
+            Title: <input type="text" placeholder="Enter Title Here">
+            Details: <textarea type="text" placeholder="Enter Details Here"></textarea>
+            Due Time:<input type="datetime-local">
+            <button id="deleteatask-btn"><img src="https://img.icons8.com/?size=100&id=98134&format=png&color=559681" alt="❌" width="20px" title="delete a task"></button>
+            <button id="saveatask-btn"><img src="https://img.icons8.com/?size=100&id=11849&format=png&color=000000" alt="✅" width="20px" title="save a task"></button>
+        </li>
+        <li id="" class="my-list-item">
+            <div id="task-title">Task Title: <span>title to cover prog</span></div>
+            <div id="task-details">Its Details: <span>details to cover prog</span></div>
+            <div id="task-due-time">Due Time: <span>2024-06-30T23:59</span></div>
+           <div class="task-btns">
+            <input type="checkbox" id="markataskascomplete-btn" title="mark a task as complete">
+            <button id="editatask-btn"><img src="https://img.icons8.com/?size=100&id=5267&format=png&color=559681" alt="✏️" width="30px" title="edit a task"></button>
+            <button id="deleteatask-btn"><img src="https://img.icons8.com/?size=100&id=98134&format=png&color=559681" alt="❌" width="20px" title="delete a task"></button>
+           </div>            
+        </li>
+    </ol>
+    <button id="addatask-btn">
+        <span>+</span>
+        Add a task
+    </button>
+    <script src="script.js"></script>
+</body>
+
+</html>
