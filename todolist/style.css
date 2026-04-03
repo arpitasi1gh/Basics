@@ -44,7 +44,7 @@ h1 {
     grid-template-columns: 1fr auto;
 }
 
-#task-title, #task-details, #task-due-time {
+.task-title, .task-details, .task-due-time {
     grid-column: 1;
 }
 
@@ -103,7 +103,7 @@ li div {
     color: rgb(54, 152, 121);
     margin-bottom: 11px;
 }
-#task-due-time {
+.task-due-time {
     margin-bottom: 0px;
 }
 
