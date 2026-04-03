@@ -1,6 +1,6 @@
 <div align="center">
 
-**Deployed Links 🔗:**
+**Deployed Link 🔗:**
 <br><br>
 [Live Demo For RenderAPI Cards](https://basics-murex.vercel.app)
 <br><br>
