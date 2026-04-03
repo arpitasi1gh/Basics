@@ -48,7 +48,7 @@ h1 {
     grid-column: 1;
 }
 
-#addatask-btn {
+.addatask-btn {
     margin-right: 5px;
     padding: 2.5px;
     font-size: large;
@@ -64,17 +64,17 @@ h1 {
     text-align: left;
 }
 
-#addatask-btn>span {
+.addatask-btn>span {
     margin-left: 9.5px;
     margin-right: 31px;
 }
 
-#addatask-btn:hover {
+.addatask-btn:hover {
     color: rgb(32, 92, 73);
     cursor: pointer;
 }
 
-#addatask-btn:active {
+.addatask-btn:active {
     color: rgba(32, 92, 73, 0.759);
     background: rgba(216, 255, 238, 0.326);
 }
@@ -92,6 +92,7 @@ body {
 
 .editing {
     width: fit-content;
+    /* max-width: 50%; */
     display: block;
     margin: 0 auto;
     margin-top: 25px;
@@ -126,9 +127,26 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.3s ease-in-out;
 }
 
-#editatask-btn {
+.my-list-item:hover .task-btns {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* slide up to original position */
+}
+
+.my-list-item.editing .task-btns {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.editatask-btn {
     background: rgb(207, 255, 231);
     border: none;
     padding: 2.6px 5px;
@@ -136,7 +154,7 @@ input[type="checkbox"] {
     border-bottom: 2px solid rgb(32, 92, 73);
 }
 
-#saveatask-btn, #deleteatask-btn {
+.saveatask-btn, .deleteatask-btn {
     background: rgb(207, 255, 231);
     border: none;
     padding: 6.5px 8.5px 9.5px 8.5px;
@@ -158,16 +176,16 @@ input[type="datetime-local"] {
     width: 55%;
 }
 
-#saveatask-btn:hover, #deleteatask-btn:hover, #editatask-btn:hover, input[type="checkbox"] {
+.saveatask-btn:hover, .deleteatask-btn:hover, .editatask-btn:hover, input[type="checkbox"] {
     cursor: pointer;
     opacity: 80%;
 }
 
-#saveatask-btn {
+.saveatask-btn {
     background: rgb(105, 224, 122);
 }
 
-#deleteatask-btn {
+.deleteatask-btn {
     background: rgb(144, 250, 172);
 }
 
