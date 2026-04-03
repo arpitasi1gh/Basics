@@ -1,10 +1,11 @@
 <div align="center">
 
-**Deployed Links 🔗:**
+**Deployed Link 🔗:**
 <br><br>
 [Live Demo For TO-DO LIST](https://to-do-list-beige-theta-27.vercel.app/)
 
 <br>
+
 **Tech Stacks Used:**
 <br><br>
 Basic HTML5, CSS3 and JavaScript
