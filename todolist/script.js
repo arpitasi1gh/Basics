@@ -95,6 +95,7 @@ list.addEventListener("click", (e) => {
                 span.style.color = "rgb(32, 92, 73)";
             });
         }
+        updateLocalStorage();
     }
 
     if (e.target.closest(".editatask-btn")) {
@@ -120,22 +121,10 @@ function updateLocalStorage() {
         tasks.push({
             title: li.querySelector(".task-title span").innerText,
             details: li.querySelector(".task-details span").innerText,
-            time: li.querySelector(".task-due-time span").innerText
+            time: li.querySelector(".task-due-time span").innerText,
+            completed: li.querySelector("input[type='checkbox']").checked
         });
     });
-    localStorage.setItem("myTasks", JSON.stringify(tasks));
-}
-
-function saveToLocalStorage(title, details, dueTime) {
-    let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
-
-    let newTask = {
-        title: title,
-        details: details,
-        dueTime: dueTime
-    };
-
-    tasks.push(newTask);
     localStorage.setItem("myTasks", JSON.stringify(tasks));
 }
 
@@ -156,5 +145,16 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>  
         `;
         list.appendChild(li);
+        if (task.completed === true) {
+            const spans = li.querySelectorAll("span");
+            li.querySelector("input[type='checkbox']").checked = true;
+            li.style.textDecoration = "line-through";
+            spans.forEach(span => {
+                span.style.marginLeft = "0";
+            });
+            li.style.background = "rgb(244 244 244 / 47%)";
+            li.style.color = "grey";
+            li.querySelectorAll("*").forEach(el => el.style.color = "inherit");
+        }
     });
 });

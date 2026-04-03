@@ -2,10 +2,10 @@
 
 **Deployed Link 🔗:**
 <br><br>
-[Live Demo For RenderAPI Cards](https://basics-murex.vercel.app)
-<br><br>
-Earlier rendered weather API & now rendered API content as cards
-<br><br><br>
+[Live Demo For TO-DO LIST](https://to-do-list-beige-theta-27.vercel.app/)
+
+<br>
+
 **Tech Stacks Used:**
 <br><br>
 Basic HTML5, CSS3 and JavaScript
