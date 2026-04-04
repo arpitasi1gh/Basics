@@ -2,21 +2,16 @@ const list = document.getElementById("my-list");
 const taskBtnsDiv = document.querySelector(".task-btns");
 const addBtn = document.querySelector(".addatask-btn");
 
-function handleDueTime(value, operation) {
-    if (operation==="formatDueTime") {
-        const date = new Date(value);
-        return date.toLocaleString(navigator.language, {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: true
-        }).replace(" at ", ", ").replace("am", "A.M.").replace("pm", "P.M.");
-    } else if (operation==="undoFormatDueTime") {
-        let dateObj = new Date(value);
-        return dateObj.toISOString().slice(0, 16); 
-    }
+function formatDueTime(value,) {
+    const date = new Date(value);
+    return date.toLocaleString(navigator.language, {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+    }).replace(" at ", ", ").replace("am", "A.M.").replace("pm", "P.M.");
 }
 
 addBtn.addEventListener("click", () => {
@@ -47,11 +42,12 @@ list.addEventListener("click", (e) => {
             return;
         }
         const li = document.createElement("li");
+        li.dataset.rawTime = taskDueTimeInput.value;
         li.className = "my-list-item";
         li.innerHTML = `
                 <div class="task-title">Task Title: <span>${taskTitleInput.value}</span></div>
                 <div class="task-details">Its Details: <span>${taskDetailsInput.value}</span></div>
-                <div class="task-due-time">Due Time: <span>${handleDueTime(taskDueTimeInput.value, "formatDueTime")}</span></div>
+                <div class="task-due-time">Due Time: <span>${formatDueTime(taskDueTimeInput.value)}</span></div>
             <div class="task-btns">
                 <input type="checkbox" class="markataskascomplete-btn" title="mark a task as complete">
                 <button class="editatask-btn"><img src="https://img.icons8.com/?size=100&id=5267&format=png&color=559681" alt="✏️" width="30px" title="edit a task"></button>
@@ -108,7 +104,7 @@ list.addEventListener("click", (e) => {
         li.innerHTML = `
             Title: <input type="text" placeholder="Enter Title Here" class="task-title-input" value="${currentTaskTitle}">
             Details: <textarea type="text" placeholder="Enter Details Here" class="task-details-input">${currentTaskDetails}</textarea>
-            Due Time:<input type="datetime-local" class="task-due-time-input" value="${handleDueTime(currentTaskDueTime, "undoFormatDueTime")}">
+            Due Time:<input type="datetime-local" class="task-due-time-input" value="${li.dataset.rawTime}">
             <button class="deleteatask-btn"><img src="https://img.icons8.com/?size=100&id=98134&format=png&color=559681" alt="❌" width="20px" title="delete a task"></button>
             <button class="saveatask-btn"><img src="https://img.icons8.com/?size=100&id=11849&format=png&color=000000" alt="✅" width="20px" title="save a task"></button>
         `;
@@ -123,6 +119,7 @@ function updateLocalStorage() {
             title: li.querySelector(".task-title span").innerText,
             details: li.querySelector(".task-details span").innerText,
             time: li.querySelector(".task-due-time span").innerText,
+            rawTime: li.dataset.rawTime,
             completed: li.querySelector("input[type='checkbox']").checked
         });
     });
@@ -146,6 +143,7 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>  
         `;
         list.appendChild(li);
+        li.dataset.rawTime = task.rawTime;
         if (task.completed === true) {
             const spans = li.querySelectorAll("span");
             li.querySelector("input[type='checkbox']").checked = true;
