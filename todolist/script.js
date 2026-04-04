@@ -36,6 +36,7 @@ addBtn.addEventListener("click", () => {
 list.addEventListener("click", (e) => {
     if (e.target.closest(".saveatask-btn")) {
         const editingLi = document.querySelector(".editing");
+        const nextSibling = editingLi.nextElementSibling;
 
         const taskTitleInput = editingLi.querySelector(".task-title-input");
         const taskDetailsInput = editingLi.querySelector(".task-details-input");
@@ -57,9 +58,9 @@ list.addEventListener("click", (e) => {
                 <button class="deleteatask-btn"><img src="https://img.icons8.com/?size=100&id=98134&format=png&color=559681" alt="❌" width="20px" title="delete a task"></button>
             </div>  
         `;
-        list.appendChild(li);
+        list.insertBefore(li, nextSibling);
 
-        document.querySelector(".editing").remove();
+        editingLi.remove();
         addBtn.style.display = "block";
 
         updateLocalStorage();
